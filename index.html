@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Quest Academy: AI Fluency, Python, Agentic AI, RAG, ML and Automation</title>
+<meta name="description" content="A free, game-style academy: hands-on Python, Agentic AI, RAG, machine learning and workflow automation tracks for AI engineering, with real coding labs, a word bank and a unique capstone project.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <button class="brand" id="brand">AI Quest Academy</button>
+      <div class="meter">
+        <div class="meter-row"><b id="rank">Level 1</b><span id="xp">0 XP</span></div>
+        <div class="xpbar" aria-hidden="true"><div id="xpfill" style="width:0"></div></div>
+      </div>
+      <span class="streak" id="streak"></span>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab" data-go="home">Tracks</button>
+      <button class="tab" data-go="track">Lessons</button>
+      <button class="tab" data-go="daily">Daily review</button>
+      <button class="tab" data-go="certs">Certifications</button>
+      <button class="tab" data-go="words">Word bank</button>
+      <button class="tab" data-go="capstone">Capstone</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+
+<!-- Content: one file per track. shared.js must load first; tracks.js after all lessons. -->
+<script src="js/data/shared.js"></script>
+<script src="js/data/python.js"></script>
+<script src="js/data/agentic.js"></script>
+<script src="js/data/rag.js"></script>
+<script src="js/data/ml.js"></script>
+<script src="js/data/automation.js"></script>
+<script src="js/data/fluency.js"></script>
+<script src="js/data/interview.js"></script>
+<script src="js/data/tracks.js"></script>
+<script src="js/data/certs.js"></script>
+
+<!-- Engine: core.js must load first; main.js starts the app. -->
+<script src="js/engine/core.js"></script>
+<script src="js/engine/lessons.js"></script>
+<script src="js/engine/quiz.js"></script>
+<script src="js/engine/python-runtime.js"></script>
+<script src="js/engine/labs.js"></script>
+<script src="js/engine/writing.js"></script>
+<script src="js/engine/words.js"></script>
+<script src="js/engine/capstone.js"></script>
+<script src="js/engine/certs.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
