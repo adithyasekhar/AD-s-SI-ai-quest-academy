@@ -1,6 +1,6 @@
 # AI Quest Academy
 
-A free, game-style academy that takes a complete beginner to building AI agents. Six full tracks are live, 120 lessons in a single `index.html` file:
+A free, game-style academy that takes a complete beginner to building AI agents. Six full tracks are live, 120 lessons in all:
 
 - **AI Fluency** (start here, no coding): 20 lessons with 14 writing exercises, built on Anthropic's 4D AI Fluency Framework
 - **Python for AI**, **Agentic AI**, **RAG and AI Frameworks**, **Algorithms and Machine Learning** and **Workflow Automation**: 100 lessons, 100 coding labs and 58 bonus challenges
@@ -81,19 +81,29 @@ Labs build the engine parts behind tools like n8n, Zapier and Make, ending with 
 
 ## How it runs
 
-Everything is in one `index.html` file. The README and CURRICULUM files are optional notes. No build step, no server, no sign-up. Progress is saved in the browser.
+No build step, no server, no sign-up. Open `index.html` in a browser, or serve the folder with any static host. Progress is saved in the browser.
 
 Labs run real Python 3 in the browser using [Pyodide](https://pyodide.org). If Pyodide can't load, the app falls back to lite Python ([Skulpt](https://skulpt.org)). In lite mode, labs that use json, regex or eval need full Python.
 
+## Project structure
+
+```
+index.html              Page shell: header, tabs, script tags
+css/styles.css          All styles
+js/data/                Content: one file per track, plus interview questions, tracks, capstone and certifications
+js/engine/              The app: state and XP, lessons, quizzes, Python runtime, labs, word bank, capstone, certifications
+js/main.js              Starts the app
+CURRICULUM.md           How to add lessons and tracks
+```
+
 ## Publish it free with GitHub Pages
 
-1. Create a repo named `ai-quest-academy` and upload `index.html`, `README.md` and `CURRICULUM.md`.
-2. Go to **Settings > Pages**, choose **Deploy from a branch**, pick `main` and `/ (root)`, then save.
-3. In about a minute it's live at `https://adithyasekhar.github.io/ai-quest-academy/`.
+1. In the repo, go to **Settings > Pages**, choose **Deploy from a branch**, pick `main` and `/ (root)`, then save.
+2. In about a minute it's live at `https://adithyasekhar.github.io/AD-s-SI-ai-quest-academy/`.
 
 ## Add a lesson or a whole new track
 
-See [CURRICULUM.md](CURRICULUM.md). Content lives in `FLU_LESSONS`, `LESSONS` (Python), `AGENT_LESSONS`, `RAG_LESSONS`, `ML_LESSONS` and `AUTO_LESSONS` in `index.html`. The certification map is `CERTS`. A new track is a new array plus one entry in `TRACKS`.
+See [CURRICULUM.md](CURRICULUM.md). Each track's lessons are in their own file in `js/data/`. The certification map is `CERTS` in `js/data/certs.js`. A new track is a new data file, a script tag in `index.html` and one entry in `TRACKS`.
 
 ## About certifications
 
